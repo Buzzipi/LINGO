@@ -1,0 +1,13 @@
+class player:
+
+    fields (attributes):
+    - name 
+
+
+    methods:
+    - __init__(self, name): creates a player
+    - ShowName(self): shows the name of the player
+
+
+
+    

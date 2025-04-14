@@ -1,0 +1,15 @@
+while loop:
+    user is welcomed to the game
+
+    user is asked if they want too play the game or not
+
+    if the user selects to play:
+        user will be asked too select the teams and team members
+
+        the game starts
+    
+    if the user declines too play a game:
+        the user will be thanked for playing the game and the application will close
+    
+    otherwise, the user will be asked to re-enter their answer, until it's clear wether they want too play or not.
+

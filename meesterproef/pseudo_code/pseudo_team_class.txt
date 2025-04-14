@@ -1,0 +1,11 @@
+class Team:
+    fields (attributes):
+    - team_name
+    - member_1 (player object)
+    - member_2 (player object)
+
+
+    methods:
+    - __init__(self): create a new team
+    - ShowTeamMembers(self): shows the members of all the teams
+    - ShowTeamName(self): shows team name

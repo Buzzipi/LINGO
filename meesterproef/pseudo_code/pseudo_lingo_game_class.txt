@@ -1,0 +1,13 @@
+class lingo_game:
+
+    fields (attributes):
+    - team_1 (team object)
+    - team_2 (team object)
+    - balls_list 
+    - numbered_balls_list
+
+    methods:
+    - guessing_round(self): in this method, both teams go against each other to guess the correct word, if a letter is in the correct position, it turns green, if a letter is in the word, but not in the correct position. It turns yellow.
+    - bingo_round(self):    this is the bingo round where participants will try to get bingo with the amount of number balls they got, if they get bingo, they win.
+    - basket(self):         this method will be used for the basket part of the lingo game. The basket includes even and odd numbers, and 3 green and 3 red balls.
+    - play_game(self):      this is the main gameplay loop of lingo, here both the guessing_round and bingo_round methods are included to create one singular loop
