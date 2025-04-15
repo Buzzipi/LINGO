@@ -3,6 +3,7 @@ class Team:
         self.team_name = team_name
         self.member1 = member1
         self.member2 = member2
+        self.amountOfGuessedWords = 0
         
     def ShowTeamMembers(self):
         print(f"first team member: {self.member1.name}")
