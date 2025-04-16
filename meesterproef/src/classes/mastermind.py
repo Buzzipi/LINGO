@@ -33,6 +33,7 @@ class Mastermind:
             
             if turn == 5:
                 print(random_word)
+                team.amountOfFailedGuessedWords += 1
                 break
                 
             for _ in range(5):
