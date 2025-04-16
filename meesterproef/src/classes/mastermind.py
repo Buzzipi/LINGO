@@ -84,9 +84,7 @@ class Mastermind:
                     break_loop = True
                     team.amountOfGuessedWords += 1
                     break
-        
-        
-     
+          
     def mastermind_game(self, team):
         random_word = list(self.random_selected_word(words))
         random_word_duplicate_letters = dict(Counter(random_word))
