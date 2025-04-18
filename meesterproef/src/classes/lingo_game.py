@@ -1,7 +1,6 @@
 from src.data.lingowords import *
 from src.classes.mastermind import *
 import random
-from collections import Counter
 from src.classes.basket import *
 
 class lingo_game:
@@ -16,6 +15,14 @@ class lingo_game:
     def CreatingBaskets(self, team1, team2):
         basket = Basket()
         basket.CreateBaskets(team1, team2)
+    
+    def PickingBallsFromBasket(self, team):
+        basket = Basket()
+        basket.BasketRound(team)
+    
+    def winnerByBalls(self, team1, team2):
+        basket = Basket()
+        basket.CheckPossibleWinnersBalls(team1, team2)
         
     
     def start_game(self):
@@ -47,7 +54,11 @@ class lingo_game:
                 break
             
             if (self.team1.amountOfGuessedWords > current_score_team_1):
-                self.team1.RandomBallFromBasket()
+                self.PickingBallsFromBasket(self.team1)
+            
+            
+            
+            
             
             
             # team 2's turn
@@ -57,12 +68,19 @@ class lingo_game:
                 break
             
             if (self.team2.amountOfGuessedWords > current_score_team_2):
-                self.team2.RandomBallFromBasket()
+                self.PickingBallsFromBasket(self.team2)
+            
+            
+            winner_with_balls = self.winnerByBalls(self.team1, self.team2)
+            
+            if(winner_with_balls):
+                break
+            
         
         print()
         print()
-        print(f"{self.team1.team_name} ball possession: {self.team1.ballsInPossession}")
-        print(f"{self.team2.team_name} ball possession: {self.team2.ballsInPossession}")
+        print(f"{self.team1.team_name} balls in basket: {self.team1.basket}")
+        print(f"{self.team2.team_name} balls in basket: {self.team2.basket}")
         print()
         print()
                 
