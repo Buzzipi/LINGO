@@ -60,7 +60,8 @@ class Mastermind:
                     user_guess_duplicate_keys[letter] += 1
                     
                     if(letter not in random_word):
-                        word_lines[index] = letter
+                        index += 1
+                        continue
                     if(letter in random_word):    
                         word_lines[index] = f"\033[93m{letter}\033[0m"
                     if letter == random_word[index]:
