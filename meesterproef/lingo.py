@@ -1,14 +1,19 @@
 from src.data.lingowords import *
 from src.data.art import *
-from src.classes.lingo_game import lingo_game
-from src.classes.team import Team
-from src.classes.player import Player
+from src.classes.lingo_game import *
+from src.classes.team import *
+from src.classes.player import *
+from src.classes.animations import *
+import time
 
 
-print(lingo_title)
+
+animations.intro()
+
+
 
 while True:
-    
+
     play = input("Woudld you like to start a game of lingo? (Y/N):  ")
 
     if (play.lower() == 'y'):
@@ -30,7 +35,7 @@ while True:
         lingo_round.start_game()
         
     elif (play.lower() == 'n'):
-        print("thanks for playing!! 👋")
+        animations.outro()
         break
         
     else:
