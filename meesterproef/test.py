@@ -4,10 +4,10 @@ list_of_num = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "1
 
 nums_in_possession = ["3", "5", "1"]
 
-test_bingo_card = [["3", "32", "3", "1"],
-                   ["3", "3", "3", "90"],
-                   ["13", "25", "33", "81"],
-                   ["16", "21", "36", "1"]]
+test_bingo_card = [["3", "32", "3", "0"],
+                   ["3", "3", "3", "11"],
+                   ["13", "1", "1", "11"],
+                   ["1", "21", "36", "1"]]
 
 bingo_card = []
 
@@ -40,12 +40,32 @@ for list in test_bingo_card:
 
 
 #bingo if the user has 4 X's diagonally or horizontally next to each other
-diagonal_bingo = []
-horizontal_bingo = []
 
+
+#checks for horizontal bingo's
 for row in test_bingo_card:
     if all(num == "x" for num in row):
-        print("bingo")
+        print("Bingo")
+
+#checks for vertical bingo's
+for vertical_col in range(4):   
+    if all(test_bingo_card[row][vertical_col] == "x" for row in range(4)):
+        print("Bingo")
+
+
+
+#checks for diagonal bingo's
+    
+#left-to-right
+if all(test_bingo_card[i][i] == "x" for i in range(4)):
+    print("bingo")
+
+#right-to-left
+if all(test_bingo_card[i][3-i] == "x" for i in range(4)):
+    print("Bingo")
+        
+        
+
     
     
 
