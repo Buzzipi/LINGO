@@ -9,6 +9,7 @@ class Team:
         self.amountOfFailedGuessedWords = 0
         self.basket = []
         self.ballsInPossession = []
+        self.bingo_card = []
         
     def ShowTeamMembers(self):
         print(f"first team member: {self.member1.name}")
