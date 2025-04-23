@@ -10,11 +10,11 @@ class Basket:
 
         for num in basket:
             if num % 2 != 0:
-                team1.basket.append(num)
+                team1.basket.append(str(num))
 
         for num in basket:
             if num % 2 == 0:
-                team2.basket.append(num)
+                team2.basket.append(str(num))
 
         for colored_ball in colored_balls:
             team1.basket.append(colored_ball)
