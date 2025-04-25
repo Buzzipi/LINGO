@@ -38,7 +38,7 @@ class lingo_game:
         bingo = Bingo()
         bingo.ShowBingoCard(team)
     
-    def CheckForBingo(self, team):
+    def CheckBingo(self, team):
         bingo = Bingo()
         value = bingo.CheckForBingo(team)
         return value
@@ -51,16 +51,6 @@ class lingo_game:
         
         self.CreatingBaskets(self.team1, self.team2)
         self.CreateBingoCards(self.team1, self.team2)
-        
-        print(f"bingo card {self.team1.team_name}")
-        old_bingo_card_team_1 = self.ShowBingoCard(self.team1)
-        
-        print()
-        
-        print(f"bingo card {self.team2.team_name}")
-        self.ShowBingoCard(self.team2)
-        
-        old_bingo_card_team_2 = self.ShowBingoCard(self.team2)
         
         while True:
             
@@ -111,8 +101,8 @@ class lingo_game:
             
             
             
-            BingoWinnerTeam1 = self.CheckForBingo(self.team1)
-            BingoWinnerTeam2 = self.CheckForBingo(self.team2)
+            BingoWinnerTeam1 = self.CheckBingo(self.team1)
+            BingoWinnerTeam2 = self.CheckBingo(self.team2)
             
             print()
             print(f"bingo check team 1: {BingoWinnerTeam1}")
@@ -123,7 +113,7 @@ class lingo_game:
                 print(f"🎉{self.team1.team_name} got BINGO!!🎉")
                 break
             if BingoWinnerTeam2 == True:
-                print(f"🎉{self.team1.team_name} got BINGO!!🎉")
+                print(f"🎉{self.team2.team_name} got BINGO!!🎉")
                 break
                 
             
@@ -138,16 +128,10 @@ class lingo_game:
         self.ShowBingoCard(self.team1)
         print()
         print()
-        print(f"old {self.team1.team_name}'s bingo card:")
-        print(old_bingo_card_team_1)
-        print()
         print("-----------------------------------------------")
         print(f"new {self.team2.team_name}'s bingo card:")
         self.ShowBingoCard(self.team2)
         print()
-        print()
-        print(f"old {self.team2.team_name}'s bingo card:")
-        print(old_bingo_card_team_2)
                 
        
         
