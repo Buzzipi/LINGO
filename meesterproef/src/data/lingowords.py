@@ -5,7 +5,7 @@ words = [
     "limbs", "picture", "message", "nibble", "foundation", "azure", "mammals", 
     "neighbors", "work", "plasma", "sibling", "blonde", "spread", "apply", "guide", 
     "mug", "sightless", "occupied", "bathing", "plead", "supervisors", "mistress", 
-    "grizzly", "plead", "small streams", "broomstick",
+    "grizzly", "plead", "broomstick",
     "rest","cello", "dairy", "cloud", "cocoa", "cadet", "mixed", "porcelain", "jester", "rotate", "actions", "valleys", "3rd", 
     "sections", "naive", "actions", "wrongdoer", "women", "meal", "meeting", "containers", 
     "impact", "german", "weeks", "what", "dwarf", "wander", "strength", "drop", "dry", 
