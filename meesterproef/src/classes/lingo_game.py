@@ -3,6 +3,8 @@ from src.classes.mastermind import *
 import random
 from src.classes.basket import *
 from src.classes.bingo import *
+import os
+import time
 
 class lingo_game:
     def __init__(self, team1, team2):
@@ -46,6 +48,7 @@ class lingo_game:
         
     
     def start_game(self):
+        os.system('cls')
         print()
         print("LETS BEGIN!")
         
@@ -67,29 +70,36 @@ class lingo_game:
                 print(f"🎉{self.team1.team_name} has won the game, because {self.team2.team_name} failed to guess a word 3 times in a row!!🎉")
                 break
             
+            os.system('cls')
             
             # team 1's turn
             self.Mastermind(self.team1)
             if (self.team1.amountOfGuessedWords >= 10):
+                os.system('cls')
                 print(f"🎉{self.team1.team_name} guessed 10 words correctly!!, they are the lingo winners!🎉")
                 break
             
             if (self.team1.amountOfGuessedWords > current_score_team_1):
                 self.PickingBallsFromBasket(self.team1)
             
+            time.sleep(3)
             
             
             
+            os.system('cls')
             
             
             # team 2's turn
             self.Mastermind(self.team2)
             if (self.team2.amountOfGuessedWords >= 10):
+                os.system('cls')
                 print(f"🎉{self.team2.team_name} guessed 10 words correctly!!, they are the lingo winners!🎉")
                 break
             
             if (self.team2.amountOfGuessedWords > current_score_team_2):
                 self.PickingBallsFromBasket(self.team2)
+            
+            time.sleep(3)
             
             
             
@@ -110,9 +120,11 @@ class lingo_game:
             print()
             
             if BingoWinnerTeam1 == True:
+                os.system('cls')
                 print(f"🎉{self.team1.team_name} got BINGO!!🎉")
                 break
             if BingoWinnerTeam2 == True:
+                os.system('cls')
                 print(f"🎉{self.team2.team_name} got BINGO!!🎉")
                 break
                 
