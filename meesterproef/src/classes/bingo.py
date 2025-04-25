@@ -47,6 +47,13 @@ class Bingo:
     
     def CheckForBingo(self, team):
         #bingo if the user has 4 X's diagonally or horizontally next to each other
+        
+        self.CheckForMatchingNums(team)
+        
+        print()
+        print("bingo card fetched in the CheckForBingo method:")
+        print(team.bingo_card)
+        print()
 
         #checks for horizontal bingo's
         for row in team.bingo_card:
