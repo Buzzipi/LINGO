@@ -32,7 +32,11 @@ class Mastermind:
                 break
             
             if turn == 5:
-                print(random_word)
+                print_random_word = ''.join(random_word)
+                print()
+                print("you're sadly out of guessing attempts :(")
+                print(f"the word was: \033[96m{print_random_word}\033[0m")
+                print()
                 team.amountOfFailedGuessedWords += 1
                 break
                 
@@ -86,8 +90,6 @@ class Mastermind:
                         
                         
                     index += 1
-                
-                print(user_guess_duplicate_keys)
                 
                 if user_guess == random_word:
                     print(f"\033[92m{team.team_name} guessed the word!\033[0m")
