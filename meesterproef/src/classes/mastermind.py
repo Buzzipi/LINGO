@@ -38,7 +38,16 @@ class Mastermind:
                 
             for _ in range(5):
                 turn += 1
-                print(turn)
+                
+                if turn < 5:
+                    print()
+                    print(f"\033[93mturn: {turn}\033[0m")
+                    print()
+                elif turn == 5:
+                    print()
+                    print(f"\033[91mturn: {turn}\033[0m")
+                    print()
+                    
                 guessed_word = '  '.join(word_lines)
                 print(guessed_word)
                 user_guess = list(input(f"{team.team_name}'s turn too guess the word:  "))
@@ -81,7 +90,7 @@ class Mastermind:
                 print(user_guess_duplicate_keys)
                 
                 if user_guess == random_word:
-                    print(f"{team.team_name} guessed the word!")
+                    print(f"\033[92m{team.team_name} guessed the word!\033[0m")
                     break_loop = True
                     team.amountOfGuessedWords += 1
                     break
