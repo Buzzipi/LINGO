@@ -109,15 +109,8 @@ class lingo_game:
             if(winner_with_balls == True):
                 break
             
-            
-            
             BingoWinnerTeam1 = self.CheckBingo(self.team1)
             BingoWinnerTeam2 = self.CheckBingo(self.team2)
-            
-            print()
-            print(f"bingo check team 1: {BingoWinnerTeam1}")
-            print(f"bingo check team 2: {BingoWinnerTeam2}")
-            print()
             
             if BingoWinnerTeam1 == True:
                 os.system('cls')
@@ -136,12 +129,14 @@ class lingo_game:
         print(f"{self.team2.team_name} balls in possession: {self.team2.ballsInPossession}")
         print()
         print()
-        print(f"new {self.team1.team_name}'s bingo card:")
+        print(f"{self.team1.team_name}'s bingo card:")
+        print()
         self.ShowBingoCard(self.team1)
         print()
         print()
         print("-----------------------------------------------")
-        print(f"new {self.team2.team_name}'s bingo card:")
+        print(f"{self.team2.team_name}'s bingo card:")
+        print()
         self.ShowBingoCard(self.team2)
         print()
                 

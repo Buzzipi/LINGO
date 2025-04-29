@@ -24,7 +24,6 @@ class Bingo:
     
     def CheckForMatchingNums(self, team):
         #check for matching nums in nums_in_possession and putting an X on them
-        print(team.bingo_card)
         for row in team.bingo_card:
             for number in row:
                 for nums in team.ballsInPossession:
@@ -49,25 +48,15 @@ class Bingo:
         #bingo if the user has 4 X's diagonally or horizontally next to each other
         
         self.CheckForMatchingNums(team)
-        
-        print()
-        print("bingo card fetched in the CheckForBingo method:")
-        print(team.bingo_card)
-        print()
 
         #checks for horizontal bingo's
         for row in team.bingo_card:
-            print(f"ur in the horizontal_col bingo check")
-            print(row)
             if all(num == "x" for num in row): #if statement is not being met
-                print("horizontal is true")
                 return True
 
         #checks for vertical bingo's
-        for vertical_col in range(4):   
-            print(f"ur in the vertical_col bingo check")
+        for vertical_col in range(4):      
             if all(team.bingo_card[row][vertical_col] == "x" for row in range(4)):
-                print("vertical is true")
                 return True
 
 

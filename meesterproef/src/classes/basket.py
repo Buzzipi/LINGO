@@ -19,10 +19,6 @@ class Basket:
         for colored_ball in colored_balls:
             team1.basket.append(colored_ball)
             team2.basket.append(colored_ball)
-            
-
-        print(team1.basket)
-        print(team2.basket)
     
     def TakeBallFromBasket(self, team):
         random_ball = random.choice(team.basket)
