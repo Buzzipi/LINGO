@@ -50,7 +50,6 @@ class lingo_game:
     def start_game(self):
         os.system('cls')
         print()
-        print("LETS BEGIN!")
         
         self.CreatingBaskets(self.team1, self.team2)
         self.CreateBingoCards(self.team1, self.team2)

@@ -24,7 +24,6 @@ while True:
 
     if (user_input.lower() == 'p'):
         os.system('cls') #clears the console
-        print("let's play!!")
         
         team_1_name = input("select the name of the first team:  ")
         team_1_player_1 = Player(input(f"select the first player of {team_1_name}:  "))
@@ -44,10 +43,10 @@ while True:
     elif (user_input.lower() == 'q'):
         os.system('cls')
         animations.outro()
-        break
-        
+        break  
     else:
+        print()
         print("\033[93mtry entering a valid option!\033[0m")
-
+        print()
 
 

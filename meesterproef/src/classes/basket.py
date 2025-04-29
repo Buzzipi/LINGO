@@ -40,9 +40,6 @@ class Basket:
         duplicate_items_team_1 = dict(Counter(team1.ballsInPossession))
         duplicate_items_team_2 = dict(Counter(team2.ballsInPossession))
         
-        print(duplicate_items_team_1)
-        print(duplicate_items_team_2)
-        
         try:
             if(duplicate_items_team_1["red_ball"] >=3):
                 print(f"🎉team '{team2.team_name}' wins because team '{team1.team_name}' got 3 red balls!🎉") 
