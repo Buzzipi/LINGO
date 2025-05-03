@@ -62,10 +62,12 @@ class lingo_game:
             
             
             if (self.team1.amountOfFailedGuessedWords >= 3):
+                os.system('cls')
                 print(f"🎉{self.team2.team_name} has won the game, because {self.team1.team_name} failed to guess a word 3 times in a row!!🎉")
                 break
             
             if (self.team2.amountOfFailedGuessedWords >= 3):
+                os.system('cls')
                 print(f"🎉{self.team1.team_name} has won the game, because {self.team2.team_name} failed to guess a word 3 times in a row!!🎉")
                 break
             
