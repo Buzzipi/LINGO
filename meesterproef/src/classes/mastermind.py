@@ -82,6 +82,7 @@ class Mastermind:
                             continue
                         else: 
                             word_lines[index] = f"\033[92m{letter}\033[0m"
+                            continue
                     try:
                         if user_guess_duplicate_keys[letter] > random_word_duplicate_letters[letter]:
                             word_lines[index] = letter
