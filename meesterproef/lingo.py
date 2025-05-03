@@ -4,15 +4,10 @@ from src.classes.lingo_game import *
 from src.classes.team import *
 from src.classes.player import *
 from src.classes.animations import *
-from src.classes.enums import *
 import os
 import time
 
-
-
 animations.intro()
-
-
 
 while True:
 
@@ -20,8 +15,6 @@ while True:
     
     user_input = input(":  ").lower()
     
-    
-
     if (user_input.lower() == 'p'):
         os.system('cls') #clears the console
         
