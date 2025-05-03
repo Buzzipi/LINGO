@@ -74,6 +74,9 @@ class lingo_game:
             os.system('cls')
             
             # team 1's turn
+            print()
+            self.ShowBingoCard(self.team1)
+            print()
             self.Mastermind(self.team1)
             if (self.team1.amountOfGuessedWords >= 10):
                 os.system('cls')
@@ -91,6 +94,9 @@ class lingo_game:
             
             
             # team 2's turn
+            print()
+            self.ShowBingoCard(self.team2)
+            print()
             self.Mastermind(self.team2)
             if (self.team2.amountOfGuessedWords >= 10):
                 os.system('cls')
