@@ -4,7 +4,7 @@ from collections import Counter
 class Basket:
     
     def CreateBaskets(self, team1, team2):
-        basket = list(range(1, 35))
+        basket = list(range(1, 56))
 
         colored_balls = ["green_ball", "green_ball", "green_ball", "red_ball", "red_ball", "red_ball"]
 
