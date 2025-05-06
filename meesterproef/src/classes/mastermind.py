@@ -72,23 +72,29 @@ class Mastermind:
                     word_lines[index] = letter
                     user_guess_duplicate_keys[letter] += 1
                     
+                    #if letter not in random word, letter turns gray
                     if(letter not in random_word):
+                        word_lines[index] = letter
                         index += 1
                         continue
-                    if(letter in random_word):    
-                        word_lines[index] = f"\033[93m{letter}\033[0m"
-                    if letter == random_word[index]:
-                        if letter in word_lines:
-                            index += 1
+                    
+                    # word turns yellow if it's in the random word 
+                    if(letter in random_word): 
+                        word_lines[index] = f"\033[93m\033[1m{letter}\033[0m\033[0m"
+                        
+                        #check for duplicate letters in word
+                        try:
+                            if user_guess_duplicate_keys[letter] > random_word_duplicate_letters[letter]:
+                                word_lines[index] = letter
+                                index += 1
+                                continue
+                        except KeyError:
                             continue
-                        else: 
-                            word_lines[index] = f"\033[92m{letter}\033[0m"
-                            index += 1
-                            continue
-                    try:
-                        if user_guess_duplicate_keys[letter] > random_word_duplicate_letters[letter]:
-                            word_lines[index] = letter
-                    except KeyError:
+                        
+                        # word turns green if it is in the random word, and on the same index 
+                        if letter == random_word[index]:
+                            word_lines[index] = f"\033[92m\033[1m{letter}\033[0m\033[0m"
+                        index += 1
                         continue
                         
                         
