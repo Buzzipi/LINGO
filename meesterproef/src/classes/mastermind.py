@@ -79,9 +79,11 @@ class Mastermind:
                         word_lines[index] = f"\033[93m{letter}\033[0m"
                     if letter == random_word[index]:
                         if letter in word_lines:
+                            index += 1
                             continue
                         else: 
                             word_lines[index] = f"\033[92m{letter}\033[0m"
+                            index += 1
                             continue
                     try:
                         if user_guess_duplicate_keys[letter] > random_word_duplicate_letters[letter]:
@@ -96,6 +98,7 @@ class Mastermind:
                     print(f"\033[92m{team.team_name} guessed the word!\033[0m")
                     break_loop = True
                     team.amountOfGuessedWords += 1
+                    team.amountOfFailedGuessedWords = 0
                     break
           
     def mastermind_game(self, team):
