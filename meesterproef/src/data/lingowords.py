@@ -1,18 +1,10 @@
 words = [
-    "apple", "therefore", "plates", "timer", "world", "hands", "act", "separate", 
-    "location", "night", "arteries", "warning", "vessels", "bundles", "improved", 
-    "shrubs", "drill", "above", "containers", "loaf", "trousers", "flame", "broad", 
-    "limbs", "picture", "message", "nibble", "foundation", "azure", "mammals", 
-    "neighbors", "work", "plasma", "sibling", "blonde", "spread", "apply", "guide", 
-    "mug", "sightless", "occupied", "bathing", "plead", "supervisors", "mistress", 
-    "grizzly", "plead", "broomstick",
-    "rest","cello", "dairy", "cloud", "cocoa", "cadet", "mixed", "porcelain", "jester", "rotate", "actions", "valleys", "3rd", 
-    "sections", "naive", "actions", "wrongdoer", "women", "meal", "meeting", "containers", 
-    "impact", "german", "weeks", "what", "dwarf", "wander", "strength", "drop", "dry", 
-    "cable", "beverage", "emergencies", "intersect", "medication", "fruit", 
-    "dates", "gents", "spike", "disco", "dough", "dream", "assist", "drone", "delay", "press", 
-    "berry", "blanket", "share", "sprites", "own", "angel", "older", 
-    "grandchild", "smooth","equal", "bicycle", "fries", "documents", "trout", 
-    "films", "celebration", "fruit", "fail", "plants", "animals","unusual", 
-    "combination", "give", "blessings", "green"
+    "apple", "timer", "world", "hands", "night", "loaf", "flame", "broad", "limbs",
+    "nibble", "azure", "apply", "guide", "plead", "grizzly", "cello", "dairy",
+    "cloud", "cocoa", "cadet", "mixed", "jester", "rotate", "naive", "women",
+    "meal", "weeks", "dwarf", "cable", "fruit", "dates", "gents", "spike", "disco",
+    "dough", "dream", "drone", "delay", "press", "berry", "share", "angel", "older",
+    "equal", "fries", "trout", "films", "plants", "green", "spoon", "knife", "brave",
+    "grape", "globe", "flock", "house", "heart", "brick", "swing", "beach", "ocean",
+    "chess", "shelf", "sugar", "blaze", "crown", "light", "sound", "storm", "shine"
 ]
