@@ -5,7 +5,6 @@ from src.classes.team import *
 from src.classes.player import *
 from src.classes.animations import *
 import os
-import time
 
 animations.intro()
 
