@@ -15,7 +15,7 @@ class Mastermind:
         
 
         for letter in amount_of_letters_in_word:
-            print(letter)
+            # print(letter)
             if letter != '' or ' ':
                 word_lines.append("_")
             else:
