@@ -37,7 +37,6 @@ class animations:
         print("----[:MAIN MENU:]----")
         print("- play:  (type: P)")
         print("- quit:  (type: Q)")
-        print("- stats: (type: S)")
         print()
         print()
         
