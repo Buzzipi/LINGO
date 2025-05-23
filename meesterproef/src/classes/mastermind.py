@@ -54,20 +54,21 @@ class Mastermind:
                     
                 guessed_word = '  '.join(word_lines)
                 print(guessed_word)
-                user_guess = list(input(f"{team.team_name}'s turn too guess the word:  "))
-                user_guess_duplicate_keys = {word: 0 for word in user_guess}
+                user_guess = input(f"{team.team_name}'s turn too guess the word:  ").lower()
+                user_guess_list = list(user_guess)
+                user_guess_duplicate_keys = {word: 0 for word in user_guess_list}
                 
                 index = 0
                 
-                if len(user_guess) > len(random_word):
+                if len(user_guess_list) > len(random_word):
                     print("this word is too long!")
                     continue
-                if len(user_guess) < len(random_word):
+                if len(user_guess_list) < len(random_word):
                     print("this word is too short!")
                     continue
                 
                 
-                for letter in user_guess:
+                for letter in user_guess_list:
                     
                     word_lines[index] = letter
                     user_guess_duplicate_keys[letter] += 1
@@ -100,7 +101,7 @@ class Mastermind:
                         
                     index += 1
                 
-                if user_guess == random_word:
+                if user_guess_list == random_word:
                     print(f"\033[92m{team.team_name} guessed the word!\033[0m")
                     break_loop = True
                     team.amountOfGuessedWords += 1
